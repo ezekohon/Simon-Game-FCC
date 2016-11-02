@@ -16,6 +16,7 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -37,6 +38,8 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <script src="js/main.js"></script>
 
 </head>
 <body>
@@ -45,24 +48,35 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
 <h2 class="title">Simon Game</h2>
+<h3 data-bind="visible: gameOver">Game Over</h3>
 	<div class="simonContainer">
 		<div class="outerCircle">
-			<div class="colorBtn green"> </div>
-			<div class="colorBtn red"> </div>
-			<div class="colorBtn yellow"> </div>
-			<div class="colorBtn blue"> </div>
+		
+		<!-- ko foreach: buttons -->
+		
+		<div class="simonButton" data-bind= "style: { backgroundColor: color(), marginRight: mr(), marginBottom: mb() }, click: $root.clickButton, css: isLighter"></div>
+		
+		<!-- /ko -->
+		
+			<!--<div class="colorBtn green" data-bind=""> </div>
+			<div class="colorBtn red" data-bind=""> </div>
+			<div class="colorBtn yellow" data-bind=""> </div>
+			<div class="colorBtn blue" data-bind=""> </div> -->
+			
+
 			<div class="innerCircle">
-				<h2>Score</h2>
-				<h4 class="score">0</h4> 
+				<h3>Score</h3>
+				<span class="sc" data-bind="text: score">0</span>
+				<p class="ta" data-bind="visible: wrong, text: message">TRY AGAIN!</p>
 				</div>
 		
 		</div>
 	</div>
 	<div class="buttons">
-	<button>Start</button>
-	<button>Reset</button>
+	<button class="button-primary" data-bind= "click: startGame">Start</button>
+	<button class="button-primary" data-bind= "click: restartGame">Reset</button>
 	<br>
-	<p>Strict Mode <input type="checkbox" data-bind="checked: isStrict" /></p>
+	<p class="str">Strict Mode <input type="checkbox" data-bind="checked: isStrict" /></p>
 	</div>
 </div>
 

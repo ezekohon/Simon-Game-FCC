@@ -38,6 +38,7 @@
 	left: 50%;
 	margin-top: 60px;
 	margin-left: -150px;
+	font-family: 'Shrikhand', cursive;
 }
 
 .outerCircle {
@@ -52,16 +53,22 @@
 	border-color: black;
 }
 
-.colorBtn {
+.simonButton {
 	display: inline-block;
 	height: 47.85%;
 	width: 47.85%;
 	outline: none!important;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	tap-highlight-color: rgba(255, 255, 255, 0);
+	
 }
-.colorBtn:hover{
+.simonButton:hover{
 	cursor: pointer;
+	 
+}
+
+.lighter{
+	filter: brightness(200%);
 }
 
 .green,
@@ -109,11 +116,27 @@
 .buttons {
   text-align: center;
   margin-top: 2em;
+	font-family: 'Shrikhand', cursive;
 }
 .title {
   text-align: center;
   margin-top: 2em;
+	font-family: 'Shrikhand', cursive;
 }
+
+.str {
+	margin-top: 2%;
+}
+
+.sc {
+	font-size: 1.7rem;
+}
+
+.ta{
+	font-size: 1.8rem;
+}
+
+
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -300,8 +323,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0; }
+  background-color: #888;
+  border-color: black; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -313,8 +336,8 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB; }
+  background-color: dimgrey;
+  border-color: black; }
 
 
 /* Forms
